@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Technical documentation page</title>
+</head>
+<body>
+
+  <nav id="navbar">
+    <header>Commands Documentation</header>
+    <ul>
+      <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+      <li><a href="#Previous_knowledge_required" class="nav-link">Previous knowledge required</a></li>
+      <li><a href="#Key_Commands_and_Navigation" class="nav-link">Key Commands and Navigation</a></li>
+      <li><a href="#Manual_Command" class="nav-link">Manual Command</a></li>
+      <li><a href="#The_date_Command" class="nav-link">The date Command</a></li>
+      <li><a href="#File_System_Navigation" class="nav-link">File System Navigation</a></li>
+      <li><a href="#Opening_a_Folder_or_File" class="nav-link">Opening a Folder or File</a></li>
+      <li><a href="#Modifying_Files_and_Directories" class="nav-link">Modifying Files and Directories</a></li>
+      <li><a href="#Right_angle_bracket_>" class="nav-link">Right angle bracket ></a></li>
+      <li><a href="#The_cat_Command" class="nav-link">The cat Command</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-doc">
+    
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <article>
+        <p>
+          Linux basic commands are very useful and can be a valuable asset in 
+          any professional toolkit.
+        </p>
+        <p>
+          In this website I will let available my personal notes and how I find
+          easier to remember the commands when I need some reminders or just 
+          refresh my memory.
+        </p>
+        <p>
+          I will split the commands in categories that I find easier to learn 
+          and remember.
+        </p>
+      </article>
+    </section>
+    
+    <section class="main-section" id="Previous_knowledge_required">
+      <header>Previous knowledge required</header>
+      <article>
+        <p>
+          No previous knowledge is required to learn these commands. These are 
+          the most basic commands used in Linux. I use them in bash to be more
+          specific, but they all should also work in z-shell. Microsoft's 
+          commands are a bit different sometimes, but many will work on both 
+          Linux and Microsoft.
+        </p>
+      </article>
+    </section>
+    
+    <section class="main-section" id="Key_Commands_and_Navigation">
+      <header>Key Commands and Navigation</header>
+      <article>
+        <p>
+          Before we look at some common commands, I just want to note a few 
+          keyboard commands that are very helpful:
+        </p>
+        <ul>
+          <li><code>Up Arrow</code><span>: Will show your last command</span></li>
+          <li><code>Down Arrow</code><span>: Will show your next command</span></li>
+          <li><code>Tab</code><span>: Will auto-complete your command</span></li>
+          <li><code>Ctrl + L</code><span>: Will clear the screen</span></li>
+          <li><code>Ctrl + C</code><span>: Will cancel a command</span></li>
+          <li><code>Ctrl + R</code><span>: Will search for a command</span></li>
+          <li><code>Ctrl + D</code><span>: Will exit the terminal</span></li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="main-section" id="Manual_Command">
+      <header>Manual Command</header>
+      <article>
+        <p>
+          On Linux and Mac, the man command is used to show the manual of any 
+          command that you can run in the terminal. So if you wanted to know 
+          more about the ls command, you could run:
+        </p>
+        <code class="long-code">man ls</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="The_date_Command">
+
+      <header>The <code>date</code> Command</header>
+
+      <article>
+        <p>
+          Another really simple one is the <code>date</code> command, which, 
+          surprise, will show you the current date and time.
+        </p>
+        <code class="long-code">date</code>
+      </article>
+    </section>
+    
+    <section class="main-section" id="File_System_Navigation">
+
+      <header>File System Navigation</header>
+      
+      <article>
+        <p>
+          Commands to navigate your file system are very important. You will be 
+          using them all the time. You won't remember every single command that 
+          you use, but these are the ones that you should remember.
+        </p>
+  
+        <table>
+          <thead>
+            <tr>
+              <th>Command</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr>
+              <td>pwd</td>
+              <td>Lists the path to the working directory</td>
+            </tr>
+            <tr>
+              <td>ls</td>
+              <td>List directory contents</td>
+            </tr>
+            <tr>
+              <td>ls -a</td>
+              <td>List contents including hidden files (Files that begin with a dot)</td>
+            </tr>
+            <tr>
+              <td>ls -l</td>
+              <td>List contents with more info including permissions (long listing)</td>
+            </tr>
+            <tr>
+              <td>ls -r</td>
+              <td>List contents reverse order</td>
+            </tr>
+            <tr>
+              <td>cd</td>
+              <td>Change directory to home</td>
+            </tr>
+            <tr>
+              <td>cd [dirname]</td>
+              <td>Change directory to specific directory</td>
+            </tr>
+            <tr>
+              <td>cd ~</td>
+              <td>Change to home directory</td>
+            </tr>
+            <tr>
+              <td>cd ..</td>
+              <td>Change to parent directory</td>
+            </tr>
+            <tr>
+              <td>cd -</td>
+              <td>Change to previous directory (which could be different than the parent of course)</td>
+            </tr>
+            <tr>
+              <td>find [dirtosearch] -name [filename]</td>
+              <td>Find location of a program inside the folder indicated in dirtosearch</td>
+            </tr>
+          </tbody>
+        </table>
+  
+        <p>
+          Of course, you can group flags together. For example, if I want to see 
+          more info and view hidden files, I could do <code>ls -l -a</code> and 
+          even shorten it to <code>ls -la</code>.
+        </p>
+      </article>
+    </section>
+    
+    <section class="main-section" id="Opening_a_Folder_or_File">
+      
+      <header>Opening a Folder or File</header>
+
+      <article>
+        <p>
+          If you want to open a file or a folder in the GUI from your terminal, the command is different depending on the OS.
+        </p>
+        <p>
+          Mac - <code>open [dirname]</code> Linux - <code>xdg-open [dirname]</code> Windows - <code>start [dirname]</code> 
+        </p>
+        <p>
+          You can open folders, files and even URLs
+        </p>
+        <code class="long-code">open https://google.com</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="Modifying_Files_and_Directories">
+      <header>Modifying Files and Directories</header>
+      <article>
+        <table>
+          <thead>
+            <tr>
+              <th>Command</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>mkdir [dirname]</td>
+              <td>Make directory</td>
+            </tr>
+            <tr>
+              <td>touch [filename]</td>
+              <td>Create file</td>
+            </tr>
+            <tr>
+              <td>rm [filename]</td>
+              <td>Remove file</td>
+            </tr>
+            <tr>
+              <td>rm -i [filename]</td>
+              <td>Remove directory, but ask before</td>
+            </tr>
+            <tr>
+              <td>rm -r [dirname]</td>
+              <td>Remove directory</td>
+            </tr>
+            <tr>
+              <td>rm -rf [dirname]</td>
+              <td>Remove directory with contents</td>
+            </tr>
+            <tr>
+              <td>rm ./*</td>
+              <td>Remove everything in the current folder</td>
+            </tr>
+            <tr>
+              <td>cp [filename] [dirname]</td>
+              <td>Copy file</td>
+            </tr>
+            <tr>
+              <td>mv [filename] [dirname]</td>
+              <td>Move file</td>
+            </tr>
+            <tr>
+              <td>mv [dirname] [dirname]</td>
+              <td>Move directory</td>
+            </tr>
+            <tr>
+              <td>mv [filename] [filename]</td>
+              <td>Rename file or folder</td>
+            </tr>
+            <tr>
+              <td>mv [filename] [filename] -v</td>
+              <td>Rename Verbose - print source/destination directory</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          We can also do multiple commands at once with the <code>&&</code> operator:
+        </p>
+        <code class="long-code">cd test2 <span class="red-code">&&</span> mkdir test3</code>
+      </article>
+    </section>
+
+    <section class="main-section" id="Right_angle_bracket_>">
+      <header>Right angle bracket ></header>
+      <article>
+        <p>
+          This symbol tells the system to output results into whatever you 
+          specify next. The target is usually a filename. You can use this 
+          symbol by itself to create a new file:
+        </p>
+        <code class="long-code">
+          <span class="red-code">></span> [filename]
+        </code>
+        <p>
+          When you are done, hit <code>ctrl+D</code>
+        </p>
+      </article>
+    </section>
+
+    <section class="main-section" id="The_cat_Command">
+      <header>The <code>cat</code> Command</header>
+      <article>
+        <p>
+          The cat command is a very common command and allows you to create 
+          single or multiple files, view content of a file, concatenate files 
+          and redirect output in terminal or files.
+        </p>
+        <p>
+          The most common thing I use it for is to display the contents of a file:
+        </p>
+        <code class="long-code">
+          cat [filename]
+        </code>
+        <p>
+          You can also create a file using the <code>cat</code> command:
+        </p>
+        <code class="long-code">
+          cat <span class="red-code">></span> [filename]
+        </code>
+        <p>
+          This will open up a new file and you can start typing. When you are 
+          done, you can press <code>Ctrl + D</code> to save and exit.
+        </p>
+        <p>
+          You can also append to a file:
+        </p>
+        <code class="long-code">
+          cat <span class="red-code">>></span> [filename]
+        </code>
+        <p>
+          This will open up the file and you can start typing. When you are done, 
+          you can press <code>Ctrl + D</code> to save and exit.
+        </p>
+        <p>
+          You can use it to show line numbers:
+        </p>
+        <code class="long-code">
+          cat -n [filename]
+        </code>
+      </article>
+    </section>
+    
+  </main>
+</body>
+</html>
